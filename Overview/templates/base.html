@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -14,28 +14,43 @@
     {% block optional_css %}
     {% endblock %}
 </head>
-<body>
+<body style="background-color: #eeeeee">
 
-<div class="row">
+<div style="height: 40px; background-color: #ffffff"></div>
+<div class="row" style="background-color: #ffffff">
     <div class="col-1"></div>
     <div class="col-10">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a href="/characters"><p style="margin: 0 10px 0 10px">Characters</p></a>
+                <a href="/characters"><h4 style="margin: 0 10px 0 10px">Characters</h4></a>
             </li>
             <li class="nav-item">
-                <a href="/items"><p style="margin: 0 10px 0 10px">Items</p></a>
+                <a href="/items"><h4 style="margin: 0 10px 0 10px">Items</h4></a>
             </li>
             <li class="nav-item">
-                <a href="/places"><p style="margin: 0 10px 0 10px">Places</p></a>
+                <a href="/places"><h4 style="margin: 0 10px 0 10px">Places</h4></a>
             </li>
             <li class="nav-item">
-                <a href="/stories"><p style="margin: 0 10px 0 10px">Stories</p></a>
+                <a href="/stories"><h4 style="margin: 0 10px 0 10px">Stories</h4></a>
             </li>
         </ul>
     </div>
     <div class="col-1"></div>
 </div>
+<div style="height: 20px; background-color: #ffffff"></div>
+<div style="height: 60px;"></div>
 
+
+<div class="row">
+    <div class="col-2"></div>
+        <div class="col-8" style="background-color: #ffffff">
+            {% block content %}
+            {% endblock %}
+        </div>
+    <div class="col-2"></div>
+</div>
+
+    {% block optional_js %}
+    {% endblock %}
 </body>
 </html>
