@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Places',
     'Stories',
     'Items',
+    'Overview',
 ]
 
 MIDDLEWARE = [

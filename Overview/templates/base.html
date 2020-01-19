@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>{{ project_name }}</title>
+    {% block optional_css %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="/characters"><p style="margin: 0 10px 0 10px">Characters</p></a>
+            </li>
+            <li class="nav-item">
+                <a href="/items"><p style="margin: 0 10px 0 10px">Items</p></a>
+            </li>
+            <li class="nav-item">
+                <a href="/places"><p style="margin: 0 10px 0 10px">Places</p></a>
+            </li>
+            <li class="nav-item">
+                <a href="/stories"><p style="margin: 0 10px 0 10px">Stories</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+</body>
+</html>

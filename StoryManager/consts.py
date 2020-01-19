@@ -1,0 +1,1 @@
+PROJECT_NAME = "Legend of the Rune Master"
