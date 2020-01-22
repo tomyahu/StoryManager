@@ -2,7 +2,7 @@ from django.db import models
 
 from Characters.models import Character
 from Items.models import Item
-from Places.models import Place
+from Locations.models import Place
 
 
 class Story(models.Model):
