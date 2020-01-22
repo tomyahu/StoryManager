@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div style="height: 10px"></div>
+    <h4>Name: {{ place.name }}</h4>
+    <h5>Region: <a href="/locations/region/{{ place.region.id }}">{{ place.region.name }}</a></h5>
+    <h5>Foundation: Year {{ place.foundation }}</h5>
+    <p>{{ place.story }}</p>
+
+    <div class="row">
+        {% for image in place_images %}
+            <img src="{{ image.image.url }}" style="width: 20%;">
+        {% endfor %}
+    </div>
+
+{% endblock %}

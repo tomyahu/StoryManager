@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div style="height: 10px"></div>
+    <h4>Name: {{ region.name }}</h4>
+    <p>{{ region.story }}</p>
+
+    <div class="row">
+        <div class="col">
+            <img class="mx-auto d-block" src="{{ region.image.url }}" style="width: 80%;">
+        </div>
+    </div>
+
+{% endblock %}

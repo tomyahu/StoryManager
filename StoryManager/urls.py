@@ -22,6 +22,6 @@ urlpatterns = [
     path('', include("Overview.urls")),
     #path('items/', include("Items.urls")),
     #path('stories/', include("Stories.urls")),
-    #path('places/', include("Places.urls")),
+    path('locations/', include("Locations.urls")),
 ]
 
