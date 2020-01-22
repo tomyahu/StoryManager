@@ -2,12 +2,26 @@
 
 {% block content %}
 
+    <h3>Places</h3>
     <div class="row">
         {% for place in places %}
             <a href="place/{{ place.id }}">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{ place.name }}</h5>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+    <h3>Regions</h3>
+    <div class="row">
+        {% for region in regions %}
+            <a href="region/{{ region.id }}">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ region.name }}</h5>
                     </div>
                 </div>
             </a>
