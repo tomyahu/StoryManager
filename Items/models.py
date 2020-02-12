@@ -4,6 +4,7 @@ from django.db import models
 class Item(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=10000, default="", blank=True)
+    display = models.ImageField(blank=False, default="images/item_displays/default.png", upload_to='images/item_displays')
 
     def __str__(self):
         return self.name
