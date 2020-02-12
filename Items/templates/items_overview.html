@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Items</h3>
+    <div class="row">
+        {% for story in stories %}
+            <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <a href="{{ item.id }}">
+                            <h5 class="card-title">{{ item.name }}</h5>
+                        </a>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
