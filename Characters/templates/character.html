@@ -3,6 +3,7 @@
 {% block content %}
 
     <div style="height: 10px"></div>
+    <img class="float-left mb-2 mr-2" src="{{ character.portrait.url }}" style="width: 200px; height: 200px;"/>
     <h4>Name: {{ character.name }}</h4>
     <h5>Age: {{ character.get_age }} years</h5>
     <p>{{ character.backstory }}</p>
