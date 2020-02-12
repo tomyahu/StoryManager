@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('characters/', include("Characters.urls")),
     path('', include("Overview.urls")),
-    #path('items/', include("Items.urls")),
+    path('items/', include("Items.urls")),
     path('stories/', include("Stories.urls")),
     path('locations/', include("Locations.urls")),
 ]
