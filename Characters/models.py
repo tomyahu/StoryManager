@@ -4,6 +4,7 @@ class Character(models.Model):
     name = models.CharField(max_length=50)
     backstory = models.TextField(max_length=10000, default="", blank=True)
     age = models.IntegerField(null=True, blank=True, default=None)
+    portrait = models.ImageField(blank=False, default="images/character_portraits/default.png", upload_to='images/character_portraits')
 
     def __str__(self):
         return self.name
