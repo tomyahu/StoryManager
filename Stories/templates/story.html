@@ -4,14 +4,21 @@
 
     <div style="height: 10px"></div>
 
-    <h4 style="text-align: center">{{ story.name }}</h4>
+    <div class="row">
+        <div class="col-9">
+            <h4 style="text-align: center">{{ story.name }}</h4>
+        </div>
+        <div class="col-3"></div>
+    </div>
 
     <div style="height: 40px"></div>
 
     <div class="row">
 
         <div class="col-9">
-            <p>{{ story.story }}</p>
+            {% for paragraph in story.get_story_as_paragraph_list %}
+                <p class="text-justify">{{ paragraph }}</p>
+            {% endfor %}
         </div>
 
         <div class="col-3">

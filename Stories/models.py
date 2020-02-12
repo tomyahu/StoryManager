@@ -12,6 +12,10 @@ class Story(models.Model):
     def __str__(self):
         return self.name
 
+    def get_story_as_paragraph_list(self):
+        splitted_story = self.story.split("\n")
+        return splitted_story
+
 class CharacterInStory(models.Model):
     character = models.ForeignKey(Character, on_delete=models.PROTECT, blank=False, null=False)
     story = models.ForeignKey(Story, on_delete=models.PROTECT, blank=False, null=False)
