@@ -3,8 +3,15 @@
 {% block content %}
 
     <div style="height: 10px"></div>
-    <h4>Name: {{ region.name }}</h4>
-    <p>{{ region.story }}</p>
+
+    <h4 style="text-align: center">{{ region.name }}</h4>
+
+    <div style="height: 30px"></div>
+
+
+    {% for paragraph in region.get_story_as_paragraph_list %}
+        <p class="text-justify">{{ paragraph }}</p>
+    {% endfor %}
 
     <div class="row">
         <div class="col">

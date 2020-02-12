@@ -9,6 +9,9 @@ class Region(models.Model):
     def __str__(self):
         return self.name
 
+    def get_story_as_patagraph_list(self):
+        return self.story.split("\n")
+
 class Place(models.Model):
     name = models.CharField(max_length=50)
     story = models.TextField(max_length=10000, default="", blank=True)
