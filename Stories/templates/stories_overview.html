@@ -3,27 +3,15 @@
 {% block content %}
     <h3>Stories</h3>
     <div class="row">
-        <div id="accordion">
-            {% for story in stories %}
-                <div class="card">
-                    <div class="card-header" id="story{{ story.id }}">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseStory{{ story.id }}"
-                                    aria-expanded="true"
-                                    aria-controls="collapseOne">
-                                {{ story.name }}
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseStory{{ story.id }}" class="collapse" aria-labelledby="story{{ story.id }}" data-parent="#accordion">
-                        <div class="card-body">
-                            {{ story.story }}
-                        </div>
+        {% for story in stories %}
+            <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <a href="{{ story.id }}">
+                            <h5 class="card-title">{{ story.name }}</h5>
+                        </a>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
 
 {% endblock %}

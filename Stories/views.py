@@ -12,3 +12,12 @@ class IndexView(TemplateView):
         context["project_name"] = PROJECT_NAME
         context["stories"] = Story.objects.all()
         return context
+
+class StoryView(TemplateView):
+    template_name = "story.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["project_name"] = PROJECT_NAME
+        context["story"] = Story.objects.get(id=kwargs["pk"])
+        return context
