@@ -3,12 +3,13 @@ from django.db import models
 from Characters.models import Character
 from Items.models import Item
 from Locations.models import Place
+import datetime
 
 
 class Story(models.Model):
     name = models.CharField(max_length=50)
     story = models.TextField(max_length=100000, default="", blank=True)
-    date = models.DateTimeField(default=0)
+    date = models.DateTimeField(default=datetime.datetime.now)
 
     def __str__(self):
         return self.name
