@@ -9,5 +9,5 @@ class Item(models.Model):
         return self.name
 
 class ItemImage(models.Model):
-    character = models.ForeignKey(Item, on_delete=models.PROTECT, blank=False, null=False)
+    item = models.ForeignKey(Item, on_delete=models.PROTECT, blank=False, null=False)
     image = models.ImageField(blank=False, upload_to='images/item_images')

@@ -6,4 +6,10 @@
     <h4>Name: {{ item.name }}</h4>
     <p>Description: {{ item.description }}</p>
 
+    <div class="row">
+        {% for image in item_images %}
+            <img src="{{ image.image.url }}" style="width: 20%;">
+        {% endfor %}
+    </div>
+
 {% endblock %}
