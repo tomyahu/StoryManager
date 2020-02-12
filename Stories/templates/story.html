@@ -3,7 +3,67 @@
 {% block content %}
 
     <div style="height: 10px"></div>
+
     <h4 style="text-align: center">{{ story.name }}</h4>
-    <p>{{ story.story }}</p>
+
+    <div style="height: 40px"></div>
+
+    <div class="row">
+
+        <div class="col-9">
+            <p>{{ story.story }}</p>
+        </div>
+
+        <div class="col-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>
+                        Characters
+                    </h5>
+                </li>
+                {% for relation in related_characters %}
+                    <li class="list-group-item">
+                        <a href="/characters/{{ relation.character.id }}">
+                            {{ relation.character.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div style="height: 10px"></div>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>
+                        Places
+                    </h5>
+                </li>
+                {% for relation in related_places %}
+                    <li class="list-group-item">
+                        <a href="/places/{{ relation.place.id }}">
+                            {{ relation.place.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div style="height: 10px"></div>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>
+                        Items
+                    </h5>
+                </li>
+                {% for relation in related_items %}
+                    <li class="list-group-item">
+                        <a href="/items/{{ relation.item.id }}">
+                            {{ relation.item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}
