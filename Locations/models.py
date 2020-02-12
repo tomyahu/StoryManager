@@ -4,7 +4,7 @@ from django.db import models
 class Region(models.Model):
     name = models.CharField(max_length=50)
     story = models.TextField(max_length=10000, default="", blank=True)
-    image = models.ImageField(blank=False, upload_to='images/region_images')
+    image = models.ImageField(blank=False, default="images/region_images/default.png", upload_to='images/region_images')
 
     def __str__(self):
         return self.name
