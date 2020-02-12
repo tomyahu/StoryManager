@@ -8,6 +8,7 @@ from Locations.models import Place
 class Story(models.Model):
     name = models.CharField(max_length=50)
     story = models.TextField(max_length=100000, default="", blank=True)
+    date = models.DateTimeField(default=0)
 
     def __str__(self):
         return self.name
