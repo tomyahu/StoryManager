@@ -73,4 +73,10 @@
         </div>
     </div>
 
+    <div class="row">
+        {% for image in story_images %}
+            <img src="{{ image.image.url }}" style="width: 20%;">
+        {% endfor %}
+    </div>
+
 {% endblock %}

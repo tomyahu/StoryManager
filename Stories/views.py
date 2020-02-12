@@ -1,4 +1,4 @@
-from Stories.models import Story, CharacterInStory, PlaceInStory, ItemInStory
+from Stories.models import Story, CharacterInStory, PlaceInStory, ItemInStory, StoryImage
 from StoryManager.consts import PROJECT_NAME
 from django.shortcuts import render
 
@@ -22,6 +22,7 @@ class StoryView(TemplateView):
 
         current_story = Story.objects.get(id=kwargs["pk"])
         context["story"] = current_story
+        context["story_images"] = StoryImage.objects.filter(story=current_story)
         context["related_characters"] = CharacterInStory.objects.filter(story=current_story)
         context["related_places"] = PlaceInStory.objects.filter(story=current_story)
         context["related_items"] = ItemInStory.objects.filter(story=current_story)
